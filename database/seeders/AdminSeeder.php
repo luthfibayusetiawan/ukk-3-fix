@@ -22,5 +22,11 @@ class AdminSeeder extends Seeder
             'password' => Hash::make('super123'),
             'created_at' => now()
         ]);
+
+         Admin::create([
+            'username' => 'superadmin',
+            'password' => Hash::make('super123'),
+            'created_at' => now()
+        ]);
     }
 }
