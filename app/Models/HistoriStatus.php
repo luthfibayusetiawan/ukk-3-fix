@@ -4,19 +4,21 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Kategori extends Model
+class HistoriStatus extends Model
 {
-    protected $table = 'kategori';
-    protected $primaryKey = 'id_kategori';
+    protected $table = 'histori_status';
+    protected $primaryKey = 'id_histori';
     public $timestamps = false;
     
     protected $fillable = [
-        'ket_kategori'
+        'id_aspirasi',
+        'tanggal',
+        'status'
     ];
 
     // Relasi sama Aspirasi
     public function aspirasi()
     {
-        return $this->hasMany(Aspirasi::class, 'id_kategori', 'id_kategori');
+        return $this->hasMany(Aspirasi::class, 'id_aspirasi', 'id_aspirasi');
     }
 }

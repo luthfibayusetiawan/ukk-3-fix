@@ -17,9 +17,9 @@ return new class extends Migration
             $table->string('nisn', 10)->primary();
             $table->string('nama', 100);
             $table->string('kelas', 15);
-            $table->string('password', 50);
+            $table->string('password', 255);
             $table->boolean('is_active')->default(true);
-            $table->datetime('created_at')->nullable();
+            $table->timestamps();
         });
 
     }
